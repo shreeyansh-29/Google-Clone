@@ -22,11 +22,11 @@ const SearchPage = () => {
           <img
             alt="google.com"
             className="searchPage__logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
           />
         </Link>
         <div className="searchPage__headerBody">
-          <Search />
+          <Search hideButtons />
           <div className="searchPage__options">
             <div className="searchPage__optionsLeft">
               <div className="searchPage__option">
@@ -72,9 +72,9 @@ const SearchPage = () => {
             About {data?.searchInformation.formattedTotalResults} results (
             {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
-          {data?.items.map((item) => (
-            <div className="searchPage__result">
-              <a href={item.link}>
+          {data?.items.map((item, index) => (
+            <div className="searchPage__result" key={index}>
+              <a href={item.link} target="_blank" rel="noreferrer">
                 {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (
                     <img
@@ -88,7 +88,12 @@ const SearchPage = () => {
                   )}
                 {item.displayLink}
               </a>
-              <a href={item.link} className="searchPage__resultTitle">
+              <a
+                href={item.link}
+                className="searchPage__resultTitle"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <h2>{item.title}</h2>
               </a>
               <p className="searchPage__resultSnippet">{item.snippet}</p>

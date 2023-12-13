@@ -1,9 +1,9 @@
 import React from "react";
-import "./home.css";
 import {Link} from "react-router-dom";
 import AppsIcon from "@material-ui/icons/Apps";
 import {Avatar} from "@material-ui/core";
 import Search from "../../components/search";
+import "./home.css";
 
 function Home() {
   return (
@@ -24,7 +24,7 @@ function Home() {
       <div className="home__body">
         <img
           alt="google.com"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
         />
         <div className="home__inputContainer">
           <Search />
