@@ -12,13 +12,13 @@ type Iprops = {
 };
 
 const Search = ({hideButtons = false}: Iprops) => {
-  const [{}, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
   const [input, setInput] = useState("");
   const history = useHistory();
 
   const search = (e: any) => {
     e.preventDefault();
-
+    if (!input.length) return;
     dispatch({type: actionTypes.SET_SEARCH_TERM, term: input});
 
     history.push("/search");
