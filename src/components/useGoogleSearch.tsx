@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-const useGoogleSearch = (term: any) => {
+const useGoogleSearch = (term: "") => {
   const [data, setData] = useState(null);
 
   useEffect(() => {

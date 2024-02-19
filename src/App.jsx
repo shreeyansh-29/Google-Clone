@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/search" children={<SearchPage />} />
+          <Route exact path="/search?q=:urlSlug" children={<SearchPage />} />
           <Route exact path="/" children={<Home />} />
         </Switch>
       </Router>
