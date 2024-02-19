@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-pattern */
 import {useState} from "react";
 import "./search.css";
 import SearchIcon from "@material-ui/icons/Search";

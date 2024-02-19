@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {useStateValue} from "../../stateProvider";
 import useGoogleSearch from "../../components/useGoogleSearch";
 import {Link, useLocation} from "react-router-dom";
